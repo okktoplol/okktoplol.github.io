@@ -1,3 +1,7 @@
 body div {
     padding-left: 1rem;
 }
+
+body p {
+    max-width: 70vw;
+}
