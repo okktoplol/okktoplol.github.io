@@ -1,7 +1,42 @@
+@font-face {
+    font-family: "Victor Mono";
+    src: url("ext/*.ttf");
+}
+
+* {
+    font-family: "Victor Mono";
+}
+
 body div {
     padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 body p {
     max-width: 70vw;
+}
+
+* {
+    color: #ddd;
+}
+
+h1, h2 {
+    color: #fff;
+}
+
+body {
+    background-color: #121212;
+}
+
+a {
+    color: #50cdfe;
+}
+
+a:visited {
+    color: #b292ac;
+}
+
+img {
+    width: 55rem;
+    max-width: 99vw;
 }
