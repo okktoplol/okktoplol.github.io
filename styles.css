@@ -1,12 +1,3 @@
-@font-face {
-    font-family: "Victor Mono";
-    src: url("ext/*.ttf");
-}
-
-* {
-    font-family: "Victor Mono";
-}
-
 body div {
     padding-left: 1rem;
     padding-right: 1rem;
