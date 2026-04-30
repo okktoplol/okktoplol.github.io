@@ -31,3 +31,8 @@ img {
     width: 55rem;
     max-width: 99vw;
 }
+
+.links {
+    display: flex;
+    flex-direction: row;
+}

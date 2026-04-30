@@ -4,3 +4,5 @@
 tmp/
 things/template.html
 CNAME
+# remove when ready
+media.html
