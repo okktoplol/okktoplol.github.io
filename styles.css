@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+html {
+    background-image: "./ext/gardening.hq.jpg";
+}
+
 body div {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -9,14 +15,17 @@ body p {
 
 * {
     color: #ddd;
+    font-family: "Victor Mono", monospace;
+    font-optical-sizing: auto;
 }
 
 h1, h2 {
     color: #fff;
+    font-style: italic;
 }
 
 body {
-    background-color: #121212;
+    background-color: #121212; 
 }
 
 a {
@@ -35,4 +44,28 @@ img {
 .links {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+}
+
+.header {
+    text-align: center
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        width: 100% !important;
+    }
+
+    .seventy {
+        width: 100% !important;
+    }
+}
+
+.content {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.seventy {
+    width: 70%;
 }

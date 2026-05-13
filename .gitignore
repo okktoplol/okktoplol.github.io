@@ -3,6 +3,7 @@
 *.log
 tmp/
 things/template.html
+things/*
 CNAME
 # remove when ready
 media.html

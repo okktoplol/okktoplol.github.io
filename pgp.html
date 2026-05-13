@@ -7,14 +7,17 @@
         <title>lia's personal homepage</title>
         <link rel="stylesheet" href="./styles.css" type="text/css" media="screen" />
     </head>
-    <body>
-        <h1>pgp keys</h1>
-        <div class="links">
-            <p><a href="./index.html">[index]</a></p>
-            <p><a href="./pgp.html">[pgp]</a></p>
-            <p><a href="./computing.html">[computing]</a></p>
+        <div class="header">
+            <h1 style="font-style:italic">pgp</h1>
+            <div class="links">
+                <p><a href="./index.html">[index]</a></p>
+                <p><a href="./pgp.html">[pgp]</a></p>
+                <p><a href="./computing.html">[computing]</a></p>
+                <!--<p><a href="./blog.html">[blog]</a></p> -->
+            </div>
         </div>
-        <div><hr></div>
+        <hr class="seventy">
+        <div class="content">
         <div>
             <pre>
 pub   ed25519 2026-03-26 [SC]
@@ -23,6 +26,7 @@ uid           [ultimate] lia l. <lia@cheesecake.cv>
             </pre>
             <a href="lia.pgp" type="application/pgp-keys">current key</a>
             <p>I have some other older keys; don't use those -w-</p>
+        </div>
         </div>
     </body>
 </html>
