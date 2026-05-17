@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
-html {
-    background-image: "./ext/gardening.hq.jpg";
-}
-
 body div {
     padding-left: 1rem;
     padding-right: 1rem;
