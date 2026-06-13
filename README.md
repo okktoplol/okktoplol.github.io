@@ -3,6 +3,7 @@
 - Things I enjoy talking about
 - Contact information + pgp
 - "faqs"
+- blogs? theyre not linked in the index however still uploaded as i have to refactor them still
 ## how
 - html edited manually with every page update
 - I use a template I created myself
