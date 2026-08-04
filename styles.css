@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap'); */
 
 body div {
     padding-left: 1rem;
@@ -11,13 +11,13 @@ body p {
 
 * {
     color: #ddd;
-    font-family: "Victor Mono", monospace;
+    /* font-family: "Victor Mono", monospace; */
     font-optical-sizing: auto;
 }
 
 h1, h2 {
     color: #fff;
-    // font-style: italic;
+    /* font-style: italic; */
 }
 
 body {
