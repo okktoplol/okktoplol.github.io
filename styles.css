@@ -1,12 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+/*
+ * Victor mono: Monospace font, for code blocks
+ * Cherry bomb: title font
+ * Open sans: text font, subtitle font
+ */
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+    background-image: url("./ext/background.jpg");
+    --accent-colort: #F7CBEF;
+    --tint-color: 255, 255, 255;
+    --tint-opacity: 0.06;
+    --shadow-blur: 20px;
+    --shadow-spread: -3px;
+    --shadow-color: rgba(255, 255, 255, 0.45);
+    --outer-shadow-blur: 24px;
+}
 
 html, body {
     overflow-x: hidden;
-}
-
-body div {
-    padding-left: 1rem;
-    padding-right: 1rem;
 }
 
 body p {
@@ -15,16 +26,36 @@ body p {
 
 * {
     color: #ddd;
-    font-family: "Victor Mono", monospace;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
     font-optical-sizing: auto;
 }
 
-h1, h2 {
+h1 {
+    font-family: "Cherry Bomb One", system-ui;
+    font-size: 2.3rem;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+}
+
+h2 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.4rem;
+    margin: 0;
+    font-weight: 500;
+    font-style: normal;
     color: #fff;
 }
 
 body {
-    background-color: #121212;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
     display: flex;
     justify-content: center;
 }
@@ -34,7 +65,7 @@ a {
 }
 
 a:visited {
-    color: #b292ac;
+    color: #F7CBEF;
 }
 
 img {
@@ -49,11 +80,15 @@ img {
 }
 
 .header {
-    text-align: center
+    text-align: center;
+    height: 7rem;
 }
 
 .main-window {
-    width: 65%
+    width: 90%;
+    background: rgba(22, 22, 26, 0.77);
+    backdrop-filter: blur(30px) saturate(1.4);
+    height: 100%
 }
 
 @media screen and (max-width: 768px) {
@@ -64,4 +99,100 @@ img {
 
 .content {
     margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.content-content {
+    padding-left: 2rem;
+    width: 60%;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.content-content::-webkit-scrollbar {
+  display: none;
+}
+
+.content-navigation {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 0rem 1rem 0rem 1rem;
+    gap: 0rem;
+}
+
+.intralink {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #ddd !important;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.intralink:hover {
+    text-decoration: underline;
+}
+
+.summary-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #ddd !important;
+    user-select: none;
+}
+
+summary {
+    height: 2.1rem;
+    width: 100%;
+}
+
+summary:hover {
+    background: rgba(22, 22, 26, 0.22);
+    cursor: pointer;
+}
+
+details .intralink {
+    margin-left: 2rem;
+}
+
+details:first-of-type summary::marker,
+:is(::-webkit-details-marker) {
+    content: "+ ";
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+pre {
+    padding: 1rem;
+    font-family: "Victor Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background: rgba(22, 22, 26, 0.22);
+}
+
+ul li {
+    margin-bottom: 0.8rem;
+}
+
+details li {
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
 }

@@ -7,40 +7,71 @@
         <link rel="shortcut icon" href="./ext/favicon.ico">
         <title>cheesecake.cv</title>
         <link rel="stylesheet" href="./styles.css" type="text/css" media="screen" />
+        <script src="index.js"></script> 
     </head>
     <body>
         <div class="main-window">
-        <div class="header">
-            <h1>cheesecake.cv</h1>
-            <div class="links">
-                <p><a href="./index.html">[index]</a></p>
-                <p><a href="./pgp.html">[pgp]</a></p>
-                <p><a href="./computing.html">[computing]</a></p>
-                <!--<p><a href="./blog.html">[blog]</a></p> -->
-            </div>
-        </div>
-        <hr>
         <div class="content">
-        <h2>about</h2>
-        <div>
-            <p>my name is lia</p>
-            <p>on the website you can find some information about me and things i enjoy doing</p>
-            <p>majoring in computer science, i love low level systems development and system administration</p>
-            <p>I also enjoy reading and listening to music</p>
-        </div>
-        <h2>contact and links</h2>
-        <div>
-            <p>you can dm me on discord, the username is `okktoplol`</p>
-            <p>my email is <a href="mailto:lia@cheesecake.cv">lia@cheesecake.cv</a></p>
-            <p><a href="https://www.last.fm/user/okklol">lastfm profile</a></p>
-            <p><a href="https://github.com/okktoplol">github</a>, I will setup a cgit frontend sometime soon for my self hosted repos</p>
-        </div>
-        <!--<h2>cool things</h2>
-        <!--<div>
-            <!-- <p><a href="./things/2026-04-08.html">[2026-04-08] music streaming setup</a></p> -->
-        <!--    <p><a href="./things/2026-03-18.html">[2026-03-18] this website</a></p>
-        <!--    <p><a href="./things/2026-03-01.html">[2026-03-01] my vps and music sharing/webradio setup</a></p>
-        <!--</div>
+            <div class="content-navigation">
+                <div class="header">
+                    <h1>cheesecake.cv</h1>
+                </div>
+                <nav class="navigation">
+                    <ul>
+                        <li>
+                        <details>
+                            <summary>
+                                <span class="summary-title">general information</span>
+                            </summary>
+                            <li><a class="intralink" href="#about">about</a></li>
+                            <li><a class="intralink" href="#contact">contact and links</a></li>
+                            <li><a class="intralink" href="#gpg">gpg</a></li>
+                        </details>
+                        </li>
+                        <li>
+                        <details>
+                            <summary>
+                                <span class="summary-title">computers and such</span>
+                            </summary>
+                            <li><a class="intralink" href="#computers">general info on personal computing</a></li>
+                        </details>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="content-content">
+                <div class="header">
+                </div>
+                <h2 id="about">about</h2>
+                <div>
+                    <p>my name is lia</p>
+                    <p>on the website you will find some basic information about me and things i enjoy doing (i just refactored it so its still under construction)</p>
+                    <p>majoring in computer science, i love low level systems development and system administration</p>
+                    <p>I also enjoy reading and listening to music</p>
+                </div>
+                <h2>contact and links</h2>
+                <div>
+                    <p>you can dm me on discord, the username is `okktoplol`</p>
+                    <p>my email is <a href="mailto:lia@cheesecake.cv">lia@cheesecake.cv</a></p>
+                    <p><a href="https://www.last.fm/user/okklol">lastfm profile</a></p>
+                    <p><a href="https://github.com/okktoplol">github</a>, I will setup a cgit frontend sometime soon for my self hosted repos</p>
+                </div>
+                <h2 id="gpg">gpg</h2>
+                <div>
+            <pre>
+pub   ed25519 2026-03-26 [SC]
+      47E7876F575E1E350757256CA1E86BE78A97888C
+uid           [ultimate] lia l. <lia@cheesecake.cv></pre>
+            <a href="lia.pgp" type="application/pgp-keys">current key</a>
+                </div>
+                <br><hr>
+                <h2 id="computers">personal computing</h2>
+                <div>
+                    <p>I love <a href="https://www.gnu.org/philosophy/free-software-intro.html">free software</a> and think using a computer should be a social thing
+                        due to this, I avoid using centralized, SAAS, proprietary, copyright, non-free-whatevers.</p>
+                    <p>following is a short list of what software I use, and a few reasons why I do</p>
+                    <p>i'll most likely elaborate on some of them further</p>
+                </div>
         </div>
         </div>
     </body>
