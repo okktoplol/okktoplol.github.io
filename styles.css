@@ -81,6 +81,9 @@ img {
 
 .header {
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 7rem;
 }
 
@@ -140,6 +143,26 @@ img {
     text-decoration: none;
 }
 
+.interlink {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #ddd !important;
+    text-decoration: none;
+    font-size: 1.4rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.active {
+    font-weight: 600;
+    color: #fff !important;
+}
+
+.interlink:hover {
+    text-decoration: underline;
+}
+
 .intralink:hover {
     text-decoration: underline;
 }
@@ -195,4 +218,22 @@ ul li {
 details li {
     margin-top: 0.3rem;
     margin-bottom: 0.3rem;
+}
+
+.content-image {
+    max-width: 80%;
+}
+
+.last {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.small {
+    font-size: 0.8rem;
+    font-weight: 300;
+    font-style: normal;
+    color: #fff;
 }
