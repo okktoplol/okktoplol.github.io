@@ -237,3 +237,8 @@ details li {
     font-style: normal;
     color: #fff;
 }
+
+.smallh1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.9rem;
+}
