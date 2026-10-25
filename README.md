@@ -4,6 +4,6 @@
 - contact, pgp
 - blog entries
 ## how
-- rust script turns markdown files into html based on template
+- manual file editing
 ## page
 - access on cheesecake (dot) cv
