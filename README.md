@@ -1,12 +1,9 @@
 # lia's personal static site
 ## contents
-- Things I enjoy talking about
-- Contact information + pgp
-- "faqs"
-- blogs? theyre not linked in the index however still uploaded as i have to refactor them still
+- things i like talking about
+- contact, pgp
+- blog entries
 ## how
-- html edited manually with every page update
-- I use a template I created myself
-- I try not to use excessive styling
+- manual file editing
 ## page
 - access on cheesecake (dot) cv
