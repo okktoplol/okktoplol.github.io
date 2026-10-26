@@ -211,6 +211,13 @@ pre {
     background: rgba(22, 22, 26, 0.22);
 }
 
+.inline-code {
+    font-family: "Victor Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background: rgba(22, 22, 26, 0.22);
+}
+
 ul li {
     margin-bottom: 0.8rem;
 }

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="./ext/favicon.ico">
+        <title>cheesecake.cv</title>
+        <link rel="stylesheet" href="../styles.css" type="text/css" media="screen" />
+    </head>
+    <body>
+        <div class="main-window">
+        <div class="content">
+            <div class="content-navigation">
+                <div class="header">
+                    <h1>cheesecake.cv</h1>
+                </div>
+                <nav class="navigation">
+                    <ul>
+                        <li>
+                        <details>
+                            <summary>
+                                <span class="summary-title">music streaming server</span>
+                            </summary>
+                            <li><a class="intralink" href="#about">about</a></li>
+                            <li><a class="intralink" href="#mpd">setting up mpd</a></li>
+                        </details>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="last">
+                    <img class="content-image" src="https://count.getloli.com/@cheesecake.cv?theme=green&padding=6&offset=0&align=center&scale=1&pixelated=1&darkmode=auto">
+                    <p class="small">visitor count</p>
+                </div>
+            </div>
+            <div class="content-content">
+                <div class="header">
+                    <a href="../index.html" class="interlink">index</a>
+                    <a href="../blog.html" class="active interlink">blog</a>
+                </div>
+                <h2 id="about">music streaming server</h2>
+                <div>
+                    <p>this entry contains a guide on how I set up my music streaming server</p>
+                    <p>the hardware requirements aren't steep;
+                        at a minimum, you'll need a CPU (either x86 or ARM are fine) with an FPU for being able to encode/decode the audio quickly and ~2GB of ram;
+                        however, more is appreciated. You'll also need ample storage for music files</p>
+                    <p>I'm running debian 13 on my server, it has 4vCPUs, 8Gb of ram and 1Tb of dedicated storage for music files</p>
+                    <p>the software used for streaming is <a href="https://github.com/MusicPlayerDaemon/MPD">mpd</a>, which is a daemon for playing music and allows
+                        you to set up an http stream. It is controlled remotely using one of its many clients, the one I use is <a href="https://github.com/mierak/rmpc">rmpc</a></p>
+                    <p>for finding and sharing music files I use <a href="https://github.com/slskd/slskd">slskd</a>, which is a client for the <a href=""https://www.slsknet.org/news/node/1>soulseek network</a>
+                    able to be controlled remotely via a web interface. I'll not go over how to set it up</p>
+                </div>
+                <h2 id="mpd">setting up mpd</h2>
+                <div>
+                    <ol>
+                        <li>install mpd on your system, for debian, run the command <pre># apt install mpd</pre></li>
+                        <li>open the configuration file in your prefered editor<pre># vim /etc/mpd.conf</pre></li>
+                        <li>set up the music directory and user mpd will run as, the user you set up must have access to all directories used by mpd</li>
+                        <li>to remotely control the server, set <span class="inline-code">bind_to_address</span> to <span class="inline-code">0.0.0.0</span>,
+                            <span class="inline-code">port</span> to your desired port and <span class="inline-code">password</span> to a secure password</li>
+                        <li>add a new audio output for your http stream:
+                            <pre>audio_output {
+	type		"httpd"
+	name		"http stream name"
+	encoder		"flac"		# run mpd --version to see available encoders
+	port		"8000"
+	format		"48000:16:1"
+	always_on       "yes"	# prevent MPD from disconnecting all listeners when playback is stopped.
+	tags            "yes"	# sends song information to connected streams 
+}</pre>
+                        </li>
+                        <li>start/enable mpd with <pre># systemctl start mpd
+# systemctl enable mpd</pre></li>
+                        <li>expose the necessary ports on your firewall</li>
+                    </ol>
+                    <p>that's it. you should probably try different encoders a bit and find what works best for you, you can also change the format for sub-cd quality
+                    to listen to the audio, open it as a network stream in whatever software you like using, like vlc</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
