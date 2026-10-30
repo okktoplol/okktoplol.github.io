@@ -98,6 +98,14 @@ img {
     .main-window {
         width: 100% !important;
     }
+
+    .content-navigation {
+        display: none !important;
+    }
+
+    .content-content {
+        width: 100% !important;
+    }
 }
 
 .content {
